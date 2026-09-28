@@ -370,7 +370,7 @@ Data Science, or a related field.
 ```text
 Job_Description_Skill_Extractor/
 │
-├── main.py
+├── streamlit_app.py
 ├── model.py
 ├── parser.py
 ├── prompt.py
@@ -384,7 +384,7 @@ Job_Description_Skill_Extractor/
 
 ### File Responsibilities
 
-#### `main.py`
+#### `streamlit_app.py`
 
 The application entry point.
 
@@ -511,7 +511,7 @@ GEMINI_API_KEY=your_api_key_here
 Start Streamlit:
 
 ```bash
-streamlit run main.py
+streamlit run streamlit_app.py
 ```
 
 The application will open in the browser.
@@ -566,7 +566,7 @@ The project follows a modular architecture:
 ```text
 ┌─────────────────────────────┐
 │        Streamlit UI         │
-│          main.py            │
+│      streamlit_app.py            │
 └──────────────┬──────────────┘
                │
                ▼
