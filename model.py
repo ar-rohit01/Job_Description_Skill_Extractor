@@ -1,5 +1,6 @@
 import os
 import time
+import json
 
 from dotenv import load_dotenv
 from google import genai
@@ -42,9 +43,21 @@ def get_model():
                 if response.parsed:
                     return response.parsed
 
-                return JobDescriptionOutput.model_validate_json(
-                    response.text
-                )
+                response_text = response.text.strip()
+
+                start = response_text.find("{")
+                end = response_text.rfind("}")
+
+                if start == -1 or end == -1 or end < start:
+                    raise ValueError(
+                        "The model did not return valid JSON."
+                    )
+
+                json_text = response_text[start:end + 1]
+
+                data = json.loads(json_text)
+
+                return JobDescriptionOutput.model_validate(data)
 
             except ServerError as e:
                 last_error = e
@@ -61,3 +74,8 @@ def get_model():
         ) from last_error
 
     return generate
+
+
+
+
+
