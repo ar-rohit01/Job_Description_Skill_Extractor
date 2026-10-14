@@ -18,11 +18,6 @@
 
 
 
-### 🚀 Live Demo
-
-🔗 **[Open the Streamlit App](https://jobdescriptionskillextractor-65x9zut3fwscvimlarqxck.streamlit.app/)**
-
-
 \---
 
 
@@ -1480,6 +1475,3 @@ Skills + Experience + Education
 
 
 \> **\*\*Built with Python, Gemini, Prompt Engineering, Pydantic and Streamlit.\*\***
-
-
-🔗 **Live Streamlit App:** [https://jobdescriptionskillextractor-65x9zut3fwscvimlarqxck.streamlit.app/](https://jobdescriptionskillextractor-65x9zut3fwscvimlarqxck.streamlit.app/)
